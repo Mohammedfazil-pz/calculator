@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-div">
+            <input type="text" id="inputBox">
+        </div>
+        <div class="button-div">
+            <div>
+                <button onclick="display(7)">7</button>
+                <button onclick="display(8)">8</button>
+                <button onclick="display(9)">9</button>
+                <button onclick="display('+')" style="background-color: black;color: white;">+</button>
+            </div>
+            <div>
+                <button onclick="display(4)">4</button>
+                <button onclick="display(5)">5</button>
+                <button onclick="display(6)">6</button>
+                <button onclick="display('-')" style="background-color: black;color: white;">-</button>
+            </div>
+            <div>
+                <button onclick="display(1)">1</button>
+                <button onclick="display(2)">2</button>
+                <button onclick="display(3 )">3</button>
+                <button onclick="display('*')" style="background-color: black;color: white;">x</button>
+            </div>
+            <div>
+                <button onclick="clearD()"  style="background-color: rgb(171, 18, 18);color: white;">C</button>
+                <button onclick="display(0)">0</button>
+                <button onclick="calculation()" style="background-color: black;color: white;">=</button>
+                <button onclick="display('/')"  style="background-color: black;color: white;" >/</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+
+    const display=(values)=>{
+        inputBox.value+=values
+
+    }
+    const clearD=()=>{
+       inputBox.value=''
+    }
+    const calculation=()=>{
+        const InputBoxValue=inputBox.value
+        console.log(InputBoxValue)
+        const result=eval(InputBoxValue)
+        inputBox.value=result
+    }
+
+    
+
+
+</script>
+
+</html>
